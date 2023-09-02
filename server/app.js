@@ -16,5 +16,10 @@ app.use(
 		useTempFiles: true,
 	})
 );
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://otp-app-server.vercel.app/",
+		credentials: true,
+	})
+);
 app.use("/api/user", userRouter);
