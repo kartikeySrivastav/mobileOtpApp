@@ -23,7 +23,7 @@ router.route("/verify").post(isAuthenticated, verify);
 
 router.route("/login").post(login);
 router.route("/logout").get(logout);
-router.route("/").get(getAllUser);
+router.route("/users").get(getAllUser);
 
 router.route("/task/add").post(isAuthenticated, addTask);
 router
